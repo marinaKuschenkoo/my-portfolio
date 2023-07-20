@@ -259,10 +259,11 @@ $bc-main: #292929;
     border-radius: 50px;
     background: center/contain url("../images/фото\ для\ резюме.jpg") no-repeat;
     @include _640 {
-       height: 403px;
-       width: 360px;
-       outline-offset: -40px;
-       outline-width: 40px; 
+       height: 400px;
+       width: 300px;
+       outline-offset: 0;
+       outline: 0; 
+       border: 15px solid #00C4F0;;
     }
     @include _540 {
        margin: 0 auto;

@@ -263,10 +263,11 @@
 }
 @media (max-width: 640px) {
   .profile__photo-wrapper__image {
-    height: 403px;
-    width: 360px;
-    outline-offset: -40px;
-    outline-width: 40px;
+    height: 400px;
+    width: 300px;
+    outline-offset: 0;
+    outline: 0;
+    border: 15px solid #00C4F0;
   }
 }
 @media (max-width: 640px) {
