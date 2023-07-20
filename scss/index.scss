@@ -364,6 +364,9 @@ $bg-about-image: #2C2C2C;
     outline-offset:-30px;
     border-radius: 15px;
     margin-bottom: 159px;
+    @include _960 {
+        display: none;
+     }
     @include _640 {
         width: 190px;
         height: 130px;

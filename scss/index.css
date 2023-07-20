@@ -399,6 +399,11 @@
   border-radius: 15px;
   margin-bottom: 159px;
 }
+@media (max-width: 960px) {
+  .about__me_second-photo {
+    display: none;
+  }
+}
 @media (max-width: 640px) {
   .about__me_second-photo {
     width: 190px;
