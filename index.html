@@ -20,7 +20,7 @@
             </ul>
         </nav>
     </header>
-    <article class="profile" id="profile">
+     <article class="profile" id="profile">
         <div class="profile__about">Здравствуйте, меня зовут
             <span class="profile__myname">Марина Кущенко</span>
             <p class="profile__description">Я занимаюсь front-end разработкой. Вам нужны услуги создания сайта? Буду
@@ -33,7 +33,7 @@
         </div>
     </article>
 
-    <article class="about" id="about">
+    <article class="about">
         <ul class="about__tech">
             <template id="template">
                 <div class="about__tech-block">
@@ -42,7 +42,7 @@
                 </div>
             </template>
         </ul>
-        <div class="about__me">
+        <div class="about__me" id="about">
             <div class="about__me-block">
                 <div class="about__me_first-photo"></div>
                 <div class="about__me_main-text">
@@ -74,7 +74,7 @@
     <article class="portfolio" id="portfolio">
         <h1 class="portfolio__header">Портфолио</h1>
         <div class="portfolio__wrapper">
-            <button class="portfolio__prev portfolio__control">🡠</button>
+            <button class="portfolio__prev portfolio__control">&#10229;</button>
         <div class="portfolio__container">
             <div class="slider">
                      <div class="slider__item">
@@ -95,7 +95,7 @@
                                     </ul>
                                 </h3>
                             </div>
-                            <a class="slider__link" target="_blank" href="https://marinakuschenkoo.github.io/altera-react/">Посмотреть проект 🠖</a>
+                            <a class="slider__link" target="_blank" href="https://marinakuschenkoo.github.io/altera-react/">Посмотреть проект &#10230;</a>
                         </div>
                     </div>
 
@@ -127,23 +127,12 @@
                                     </ul>
                                 </h3>
                             </div>
-                            <a class="slider__link" target="_blank" href="https://marinakuschenkoo.github.io/mesto-react/">Посмотреть проект 🠖</a>
+                            <a class="slider__link" target="_blank" href="https://marinakuschenkoo.github.io/mesto-react/">Посмотреть проект &#10230;</a>
                         </div>
                     </div>
-                    <!-- <div class="slider__item">
-                        <div class="slider__img"></div>
-                        <div class="slider__text-wrapper">
-                            <div class="slider__text">
-                                <h3 class="slider__heading"></h3>
-                                <h3 class="slider__tech">
-                                </h3>
-                            </div>
-                            <a class="slider__link" target="_blank">Посмотреть проект 🠖</a>
-                        </div>
-                    </div> -->
             </div>
         </div>
-        <button class="portfolio__next portfolio__control">🡢</button>
+        <button class="portfolio__next portfolio__control">&#10230;</button>
     </div>
     </article>
     <footer class="footer" id="footer">
@@ -160,11 +149,12 @@
             <li>TG: @marinakuschenkoo</li>
             <li>Tel: +7 (918) - 219 - 16 -53</li>
         </ul>
+    </div>
         <div class="footer__logo">
             <div class="footer__logo-img"></div>
             <p class="footer__copyright">Copyright © 2023, Marina Kuschenko</p>
         </div>
-    </div>
+    
     </footer>
     <script src="./index.js"></script>
 </body>

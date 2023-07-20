@@ -68,8 +68,8 @@
 @media (max-width: 640px) {
   .header {
     font-size: 13px;
-    max-width: 520px;
-    margin: 20px;
+    max-width: 600px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 640px) {
@@ -221,12 +221,12 @@
 
 .profile__photo-wrapper {
   display: flex;
-  width: 550px;
+  max-width: 550px;
   height: 550px;
 }
 @media (max-width: 640px) {
   .profile__photo-wrapper {
-    width: 460px;
+    max-width: 460px;
   }
 }
 @media (max-width: 640px) {
@@ -705,7 +705,8 @@
 .footer__logo {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 50px;
+  row-gap: 15px;
+  justify-items: center;
 }
 
 .footer__menu li {
@@ -726,4 +727,8 @@
 }
 .footer__menu li:hover:after, .footer__menu li:focus:after {
   width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.footer__copyright {
+  font-size: 13px;
 }/*# sourceMappingURL=index.css.map */

@@ -108,8 +108,8 @@ $bc-main: #292929;
      }
      @include _640 {
         font-size: 13px;
-        max-width: 520px;
-        margin: 20px
+        max-width: 600px;
+        margin-bottom: 20px;
      }
      @include _540 {
         flex-direction: column;
@@ -229,10 +229,10 @@ $bc-main: #292929;
 }
 .profile__photo-wrapper{
     display: flex;
-    width: 550px;
+    max-width: 550px;
     height: 550px;
     @include _640 {
-       width: 460px; 
+        max-width: 460px; 
     }
     @include _540 {
         margin: 0 auto;
@@ -590,7 +590,8 @@ $bg-about-image: #2C2C2C;
 .footer__logo {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 50px;
+    row-gap: 15px;
+    justify-items: center;
 }
 .footer__menu li {
     position: relative;
@@ -612,4 +613,7 @@ $bg-about-image: #2C2C2C;
     &:focus:after {
         width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
     }
+}
+.footer__copyright {
+    font-size: 13px;
 }
