@@ -346,9 +346,10 @@ $bg-about-image: #2C2C2C;
     border-radius: 15px;
 
     @include _640 {
-        height: 170px;
-        outline-width: 24px;
-        outline-offset: -24px;
+        width: 272px;
+        height: 126px;
+        outline-width: 10px;
+        outline-offset: -10px;
      }
 }
 .about__me_second-photo {
@@ -360,10 +361,10 @@ $bg-about-image: #2C2C2C;
     border-radius: 15px;
     margin-bottom: 159px;
     @include _640 {
-        width: 285px;
-        height: 228px;
-        outline-width: 24px;
-        outline-offset: -24px;
+        width: 350px;
+        height: 130px;
+        outline-width: 10px;
+        outline-offset: -10px;
         margin-bottom: 90px;
      }
 }
@@ -445,6 +446,9 @@ $bg-about-image: #2C2C2C;
     @include flexible();
     @include _640 {
         flex-direction: column;
+     }
+     @include _640 {
+        padding-bottom: 20px;
      }
 }
 .slider__img_first {
