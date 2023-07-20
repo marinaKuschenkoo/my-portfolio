@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link href="./scss/index.css" rel="stylesheet">
+</head>
+
+<body class="page">
+    <header class="header" id="header">
+        <div class="header__logo"></div>
+        <nav class="header__menu">
+            <ul class="header__menu_items">
+                <li><a href="#header">Главная</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="profile" id="profile">
+        <div class="profile__about">Здравствуйте, меня зовут
+            <span class="profile__myname">Марина Кущенко</span>
+            <p class="profile__description">Я занимаюсь front-end разработкой. Вам нужны услуги создания сайта? Буду
+                рада помочь вам :</p>
+            <a class="profile__button" target="_blank" href="https://t.me/marinakuschenkoo">Contact me</a>
+        </div>
+        <div class="profile__photo-wrapper">
+            <div class="profile__photo-wrapper__rounds"></div>
+            <div class="profile__photo-wrapper__image"></div>
+        </div>
+    </article>
+
+    <article class="about" id="about">
+        <ul class="about__tech">
+            <template id="template">
+                <div class="about__tech-block">
+                    <img class="about__image-block">
+                    <p class="about__text-block"></p>
+                </div>
+            </template>
+        </ul>
+        <div class="about__me">
+            <div class="about__me-block">
+                <div class="about__me_first-photo"></div>
+                <div class="about__me_main-text">
+                    <h2 class="about__me-header">Обо мне</h2>
+                    <p class="about__me-text">
+                        Привет ещё раз! И так, вы уже знаете, что меня зовут Марина. Немного обо мне: 22 года, живу в
+                        Симферополе. Почему я выбрала такую сложную профессию как программирование? Все просто - мне
+                        невероятно нравится писать код и тут же видеть результат своих действий. Программирование - это
+                        несомненно профессия будущего.
+                        Занимаюсь программированием я уже 5 лет, но Frontend разработкой 1 год. Немного про мое
+                        образование:
+                        <br>
+                        Закончила Крымский федеральный университет по специальности Программная Инженерия (бакалавр).
+                        После
+                        окончания поняла, что университет дал мне знания обо всех профессиях в сфере IT по чуть-чуть,
+                        поэтому я начала искать направление, которое было бы мне интересно. Именно так осенью 2022 года
+                        я
+                        наткнулась на курс Яндекс Практикума «Веб-разработчик», сейчас же я нахожусь на финишной прямой,
+                        а
+                        именно пишу свой дипломный проект. Но окончание курса - не значит окончание учебы,
+                        программирование
+                        подразумевает под собой постоянное обучение, чем я и планирую заниматься.
+                    </p>
+                </div>
+                <div class="about__me_second-photo"></div>
+            </div>
+        </div>
+    </article>
+    <article class="portfolio" id="portfolio">
+        <h1 class="portfolio__header">Портфолио</h1>
+        <div class="portfolio__wrapper">
+            <button class="portfolio__prev portfolio__control">🡠</button>
+        <div class="portfolio__container">
+            <div class="slider">
+                     <div class="slider__item">
+                        <div class="slider__img_first slider__img"></div>
+                        <div class="slider__text-wrapper">
+                            <div class="slider__text">
+                                <h3 class="slider__heading">Landing ALTERA</h3>
+                                <h3 class="slider__tech">
+                                    Сайт был создан для консалтинговой компании “ALTERA “.
+                                    <br><br>
+                                    При его создании использовались:
+                                    <br><br>
+                                    <ul>
+                                        <li>Figma для создания дизайна</li>
+                                        <li>HTML/CSS</li>
+                                        <li>Библиотека React</li>
+                                        <li>Git</li>
+                                    </ul>
+                                </h3>
+                            </div>
+                            <a class="slider__link" target="_blank" href="https://marinakuschenkoo.github.io/altera-react/">Посмотреть проект 🠖</a>
+                        </div>
+                    </div>
+
+                    <div class="slider__item">
+                        <div class=" slider__img_second slider__img"></div>
+                        <div class="slider__text-wrapper">
+                            <div class="slider__text">
+                                <h3 class="slider__heading">Проект Mesto</h3>
+                                <h3 class="slider__tech">
+                                    Данный проект был реализован во время обучения в Яндекс.Практикуме.
+                                    <br><br>
+                                    Функции: <br><br>
+                                    <ul>
+                                        <li>Изменение имени пользователя, аватара;</li>
+                                        <li>Создание, удаление новых карточек(пользователь может удалить только свои карточки, к чужим доступа нет);</li>
+                                        <li>Постановка / снятие лайка.</li>
+                                    </ul>
+                                    
+                                    
+                                    
+                                    <br><br>
+                                    При его создании использовались:
+                                    <br><br>
+                                    <ul>
+                                        <li>Figma для создания дизайна</li>
+                                        <li>HTML/CSS</li>
+                                        <li>Библиотека React</li>
+                                        <li>Git</li>
+                                    </ul>
+                                </h3>
+                            </div>
+                            <a class="slider__link" target="_blank" href="https://marinakuschenkoo.github.io/mesto-react/">Посмотреть проект 🠖</a>
+                        </div>
+                    </div>
+                    <!-- <div class="slider__item">
+                        <div class="slider__img"></div>
+                        <div class="slider__text-wrapper">
+                            <div class="slider__text">
+                                <h3 class="slider__heading"></h3>
+                                <h3 class="slider__tech">
+                                </h3>
+                            </div>
+                            <a class="slider__link" target="_blank">Посмотреть проект 🠖</a>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+        <button class="portfolio__next portfolio__control">🡢</button>
+    </div>
+    </article>
+    <footer class="footer" id="footer">
+        <div class="footer__wrapper">
+        <ul class="footer__menu">
+            <li><a href="#header">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        <ul class="footer__contacts">
+            <li>Контакты::</li>
+            <li>Email: marina_kuschenko1@yandex.ru</li>
+            <li>TG: @marinakuschenkoo</li>
+            <li>Tel: +7 (918) - 219 - 16 -53</li>
+        </ul>
+        <div class="footer__logo">
+            <div class="footer__logo-img"></div>
+            <p class="footer__copyright">Copyright © 2023, Marina Kuschenko</p>
+        </div>
+    </div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>

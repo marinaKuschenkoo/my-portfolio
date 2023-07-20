@@ -1,0 +1,729 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "ArodoraPro-Light";
+  src: url("../fonts/ArodoraPro-Light.otf");
+}
+@font-face {
+  font-family: "NextArt-Bold";
+  src: url("../fonts/NEXT_ART_Bold.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.page {
+  font-family: "ArodoraPro-Light";
+  font-style: normal;
+  line-height: normal;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #292929;
+  color: #E4E4E4;
+  margin: 0 auto;
+}
+
+.header__logo {
+  background: center/contain url("../images/logoo.png") no-repeat;
+  width: 173px;
+  height: 88px;
+}
+@media (max-width: 640px) {
+  .header__logo {
+    height: 45px;
+  }
+}
+@media (max-width: 640px) {
+  .header__logo {
+    margin-bottom: 10px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 40px auto auto auto;
+  max-width: 1340px;
+  width: 100%;
+}
+@media (max-width: 1280px) {
+  .header {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1280px) {
+  .header {
+    max-width: 930px;
+  }
+}
+@media (max-width: 960px) {
+  .header {
+    max-width: 900px;
+  }
+}
+@media (max-width: 640px) {
+  .header {
+    font-size: 13px;
+    max-width: 520px;
+    margin: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header__menu_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 18px;
+}
+.header__menu_items li:not(:last-child) {
+  margin-right: 145px;
+}
+.header__menu_items a {
+  color: #E4E4E4;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  line-height: 1; /*задаём высоту строки*/
+  text-decoration: none; /*убираем подчёркивание*/
+}
+.header__menu_items a:after {
+  display: block;
+  position: absolute;
+  left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  width: 0; /*задаём длинну линии до наведения курсора*/
+  height: 2px; /*задаём ширину линии*/
+  background-color: #E29500; /*задаём цвет линии*/
+  content: "";
+  transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+.header__menu_items a:hover:after, .header__menu_items a:focus:after {
+  width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+@media (max-width: 960px) {
+  .header__menu_items li:not(:last-child) {
+    margin-right: 36px;
+  }
+}
+@media (max-width: 640px) {
+  .header__menu_items {
+    font-size: 13px;
+  }
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1340px;
+  width: 100%;
+  margin: 0 auto 50px auto;
+}
+@media (max-width: 1280px) {
+  .profile {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 960px) {
+  .profile {
+    max-width: 900px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+@media (max-width: 640px) {
+  .profile {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.profile__about {
+  margin-top: 122px;
+  max-width: 400px;
+  font-size: 30px;
+}
+@media (max-width: 640px) {
+  .profile__about {
+    margin-top: -50px;
+    font-size: 20px;
+  }
+}
+
+.profile__myname {
+  font-family: "NextArt-Bold";
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  font-size: 72px;
+  margin-top: 45px;
+  margin-bottom: 27px;
+}
+@media (max-width: 640px) {
+  .profile__myname {
+    font-size: 40px;
+  }
+}
+
+.profile__description {
+  font-family: "ArodoraPro-Light";
+  font-style: normal;
+  line-height: normal;
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 27px;
+}
+@media (max-width: 640px) {
+  .profile__description {
+    font-size: 13px;
+  }
+}
+
+.profile__button {
+  font-family: "NextArt-Bold";
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+  padding: 14px 38px;
+  color: #000;
+  font-size: 18px;
+  border: #E29500;
+  border-radius: 6px;
+  box-shadow: 0px 2px 13px 0px rgba(226, 158, 0, 0.48);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #E29500 0%, #e86844 51%, #E29500 100%);
+}
+.profile__button:hover {
+  cursor: pointer;
+  background-position: right center;
+}
+@media (max-width: 640px) {
+  .profile__button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+.profile__photo-wrapper {
+  display: flex;
+  width: 550px;
+  height: 550px;
+}
+@media (max-width: 640px) {
+  .profile__photo-wrapper {
+    width: 460px;
+  }
+}
+@media (max-width: 640px) {
+  .profile__photo-wrapper {
+    margin: 0 auto;
+  }
+}
+
+.profile__photo-wrapper__rounds {
+  margin: auto;
+  margin-right: 20px;
+  width: 90px;
+  height: 465px;
+  background: center/contain url("../images/rounds.svg") no-repeat;
+}
+@media (max-width: 640px) {
+  .profile__photo-wrapper__rounds {
+    width: 60px;
+  }
+}
+@media (max-width: 640px) {
+  .profile__photo-wrapper__rounds {
+    display: none;
+  }
+}
+
+.profile__photo-wrapper__image {
+  width: 550px;
+  height: 550px;
+  outline: 50px solid #00C4F0;
+  outline-offset: -50px;
+  border-radius: 50px;
+  background: center/contain url("../images/фото для резюме.jpg") no-repeat;
+}
+@media (max-width: 640px) {
+  .profile__photo-wrapper__image {
+    height: 403px;
+    width: 360px;
+    outline-offset: -40px;
+    outline-width: 40px;
+  }
+}
+@media (max-width: 640px) {
+  .profile__photo-wrapper__image {
+    margin: 0 auto;
+  }
+}
+
+.about {
+  font-family: "ArodoraPro-Light";
+  font-style: normal;
+  line-height: normal;
+  font-weight: 300;
+  font-weight: 24px;
+  background-color: #414141;
+  max-width: 100%;
+}
+
+.about__tech {
+  max-width: 1250px;
+  margin: 100px auto auto auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 30px;
+}
+@media (max-width: 960px) {
+  .about__tech {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+}
+@media (max-width: 640px) {
+  .about__tech {
+    margin: 50 auto auto auto;
+    justify-items: center;
+  }
+}
+
+.about__tech-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 270px;
+  height: 270px;
+  background-color: #2A2A2A;
+  border-radius: 30px;
+}
+@media (max-width: 1280px) {
+  .about__tech-block {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (max-width: 960px) {
+  .about__tech-block {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+@media (max-width: 640px) {
+  .about__tech-block {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.about__image-block {
+  margin-bottom: 50px;
+}
+@media (max-width: 640px) {
+  .about__image-block {
+    margin-bottom: 13px;
+    width: 27px;
+  }
+}
+
+.about__me-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  margin-top: 149px;
+}
+.about__me-block div:last-child {
+  align-self: flex-end;
+}
+@media (max-width: 640px) {
+  .about__me-block {
+    margin-top: 90px;
+  }
+}
+
+.about__me {
+  background: center/cover url("../images/elipsAbout.svg") no-repeat;
+  background-position: 25% 5%;
+}
+
+.about__me_first-photo {
+  width: 272px;
+  height: 320px;
+  background: center/contain url("../images/портфолио.jpg") no-repeat;
+  outline: 30px solid #2C2C2C;
+  outline-offset: -30px;
+  border-radius: 15px;
+}
+@media (max-width: 640px) {
+  .about__me_first-photo {
+    height: 170px;
+    outline-width: 24px;
+    outline-offset: -24px;
+  }
+}
+
+.about__me_second-photo {
+  width: 287px;
+  height: 350px;
+  background: center/contain url("../images/портфолио2.jpg") no-repeat;
+  outline: 30px solid #2C2C2C;
+  outline-offset: -30px;
+  border-radius: 15px;
+  margin-bottom: 159px;
+}
+@media (max-width: 640px) {
+  .about__me_second-photo {
+    width: 285px;
+    height: 228px;
+    outline-width: 24px;
+    outline-offset: -24px;
+    margin-bottom: 90px;
+  }
+}
+
+.about__me_main-text {
+  max-width: 496px;
+  margin-bottom: 159px;
+}
+@media (max-width: 640px) {
+  .about__me_main-text {
+    margin-bottom: 90px;
+  }
+}
+
+.about__me-text {
+  font-family: "ArodoraPro-Light";
+  font-style: normal;
+  line-height: normal;
+  font-weight: 300;
+  letter-spacing: 1%;
+  font-size: 20px;
+  text-align: left;
+  background-color: #2A2A2A;
+  max-width: 370px;
+  padding: 27px 63px;
+  border-radius: 14px;
+}
+@media (max-width: 640px) {
+  .about__me-text {
+    font-size: 13px;
+    padding: 27px 36px;
+  }
+}
+
+.about__me-header {
+  font-family: "NextArt-Regular";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 48px;
+  margin-left: 28px;
+  text-transform: uppercase;
+}
+@media (max-width: 640px) {
+  .about__me-header {
+    font-size: 35px;
+  }
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 87px;
+  margin-bottom: 50px;
+}
+
+.portfolio__container {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 970px;
+  background-color: #414141;
+  border-radius: 29px;
+  padding: 50px;
+  margin-top: 50px;
+}
+@media (max-width: 1280px) {
+  .portfolio__container {
+    max-width: 660px;
+  }
+}
+@media (max-width: 500px) {
+  .portfolio__container {
+    padding: 0;
+  }
+}
+
+.portfolio__header {
+  font-family: "NextArt-Regular";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 48px;
+}
+@media (max-width: 640px) {
+  .portfolio__header {
+    font-size: 35px;
+  }
+}
+
+.portfolio__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .slider__item {
+    flex-direction: column;
+  }
+}
+
+.slider__img_first {
+  background: center/cover url("../images/портфолио_альтера.png") no-repeat;
+}
+
+.slider__img_second {
+  background: center/cover url("../images/портфолио_место.png") no-repeat;
+}
+
+.slider__img {
+  width: 490px;
+  height: 500px;
+  border-radius: 30px;
+  margin-right: 100px;
+}
+@media (max-width: 1280px) {
+  .slider__img {
+    width: 300px;
+  }
+}
+@media (max-width: 960px) {
+  .slider__img {
+    width: 350px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .slider__img {
+    width: 250px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 500px) {
+  .slider__img {
+    height: 230px;
+  }
+}
+@media (max-width: 480px) {
+  .slider__img {
+    height: 294px;
+  }
+}
+
+.slider__text {
+  margin-bottom: 115px;
+}
+@media (max-width: 640px) {
+  .slider__text {
+    margin-bottom: 40px;
+  }
+}
+
+.slider__heading {
+  font-size: 24px;
+  margin-bottom: 78px;
+  text-align: center;
+  font-family: "ArodoraPro-Light";
+  font-style: normal;
+  line-height: normal;
+  font-weight: 300;
+}
+@media (max-width: 640px) {
+  .slider__heading {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.slider__tech {
+  font-size: 18px;
+  max-width: 319px;
+  font-family: "ArodoraPro-Light";
+  font-style: normal;
+  line-height: normal;
+  font-weight: 300;
+}
+@media (max-width: 640px) {
+  .slider__tech {
+    font-size: 13px;
+  }
+}
+
+.slider__text-wrapper {
+  margin-top: 32px;
+  max-width: 320px;
+}
+@media (max-width: 1280px) {
+  .slider__text-wrapper {
+    max-width: 230px;
+  }
+}
+@media (max-width: 640px) {
+  .slider__text-wrapper {
+    max-width: 185px;
+  }
+}
+
+.slider__link {
+  color: #E2A100;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 115px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.slider__link:hover {
+  color: #ffb702;
+}
+
+.portfolio__control {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #E2A300;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.portfolio__control:hover {
+  background-color: #ffb702;
+}
+@media (max-width: 640px) {
+  .portfolio__control {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.portfolio__prev {
+  margin-right: 40px;
+}
+@media (max-width: 960px) {
+  .portfolio__prev {
+    margin-right: 10px;
+  }
+}
+
+.portfolio__next {
+  margin-left: 40px;
+}
+@media (max-width: 960px) {
+  .portfolio__next {
+    margin-left: 10px;
+  }
+}
+
+.footer {
+  background-color: #414141;
+  font-size: 18px;
+}
+
+.footer__wrapper {
+  font-family: "ArodoraPro-Light";
+  font-style: normal;
+  line-height: normal;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  max-width: 873px;
+  margin: 50px auto;
+}
+@media (max-width: 640px) {
+  .footer__wrapper {
+    font-size: 13px;
+    margin: 40px 20px;
+  }
+}
+
+.footer__logo-img {
+  width: 90px;
+  height: 60px;
+  background: center/contain url("../images/logoo.png") no-repeat;
+}
+
+.footer__menu {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 18px;
+}
+.footer__menu a {
+  color: #E4E4E4;
+  text-decoration: none;
+}
+
+.footer__contacts {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 18px;
+}
+
+.footer__logo {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 50px;
+}
+
+.footer__menu li {
+  position: relative;
+  cursor: pointer;
+  line-height: 1; /*задаём высоту строки*/
+  text-decoration: none; /*убираем подчёркивание*/
+}
+.footer__menu li:after {
+  display: block;
+  position: absolute;
+  left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  width: 0; /*задаём длинну линии до наведения курсора*/
+  height: 2px; /*задаём ширину линии*/
+  background-color: #E29500; /*задаём цвет линии*/
+  content: "";
+  transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+.footer__menu li:hover:after, .footer__menu li:focus:after {
+  width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,615 @@
+@import "./fonts.scss";
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+$blue-color: #00C4F0;
+$yellow-color: #E29500;
+$bc-main: #292929;
+@mixin flexible () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+@mixin arodoralight () {
+    font-family: 'ArodoraPro-Light';
+    font-style: normal;
+    line-height: normal;
+    font-weight: 300;
+}
+@mixin nextArtlight () {
+    font-family: 'NextArt-Bold';
+    font-style: normal;
+    line-height: normal;
+    font-weight: 700;
+}
+@mixin nextArtRegular () {
+    font-family: 'NextArt-Regular';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+@mixin _1280 {
+    @media (max-width: 1280px){
+        @content;
+    }
+}
+@mixin _1200 {
+    @media (max-width: 1280px){
+        @content;
+    }
+}
+@mixin _960 {
+    @media (max-width: 960px){
+        @content;
+    }
+}
+@mixin _640 {
+    @media (max-width: 640px){
+        @content;
+    }
+}
+@mixin _540 {
+    @media (max-width: 640px){
+        @content;
+    }
+}
+@mixin _500 {
+    @media (max-width: 500px){
+        @content;
+    }
+}
+@mixin _480 {
+    @media (max-width: 480px){
+        @content;
+    }
+}
+
+
+.page {
+    @include arodoralight();
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $bc-main;
+    color: #E4E4E4;
+    margin: 0 auto;
+}
+.header__logo {
+    background: center/contain url("../images/logoo.png") no-repeat;
+    width: 173px;
+    height: 88px;
+    @include _640 {
+        height: 45px;
+    }
+    @include _540 {
+        margin-bottom: 10px;
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    margin: 40px auto auto auto;
+    max-width: 1340px;
+    width: 100%;
+
+    @include _1280 {
+        max-width: 1200px;
+     }
+     @include _1200 {
+        max-width: 930px;
+     }
+     @include _960 {
+        max-width: 900px;
+     }
+     @include _640 {
+        font-size: 13px;
+        max-width: 520px;
+        margin: 20px
+     }
+     @include _540 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.header__menu_items {
+    @include flexible ();
+    list-style: none;
+    font-size: 18px;
+        & li:not(:last-child) {
+            margin-right: 145px;
+        }
+        a {
+            color: #E4E4E4;
+            text-decoration: none;
+            position: relative;
+            cursor: pointer;
+            line-height: 1; /*задаём высоту строки*/
+            text-decoration: none; /*убираем подчёркивание*/
+
+            &:after{
+                display: block;
+                position: absolute;
+                left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+                width: 0;/*задаём длинну линии до наведения курсора*/
+                height: 2px; /*задаём ширину линии*/
+                background-color: $yellow-color; /*задаём цвет линии*/
+                content: "";
+                transition: width 0.3s ease-out; /*задаём время анимации*/
+            }
+            &:hover:after,
+            &:focus:after {
+                width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+            }
+        }
+        @include _960 {
+            & li:not(:last-child) {
+                margin-right: 36px;
+            }
+         }
+         @include _640 {
+            font-size: 13px;
+         }
+}
+.profile {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1340px;
+    width: 100%;
+    margin: 0 auto 50px auto;
+
+    @include _1280 {
+        max-width: 1200px;
+     }
+     
+    @include _960 {
+        max-width: 900px;
+        flex-direction: column-reverse;
+        align-items: center;
+     }
+     @include _640 {
+        flex-direction: column-reverse;
+        align-items: center;
+     }
+}
+.profile__about {
+    margin-top: 122px;
+    max-width: 400px;
+    font-size: 30px;
+    @include _640 {
+        margin-top: -50px;
+        font-size: 20px;
+     }
+}
+.profile__myname {
+    @include nextArtlight();
+    display: flex;
+    flex-direction: column;
+    font-size: 72px;
+    margin-top: 45px;
+    margin-bottom: 27px;
+    @include _640 {
+       font-size: 40px;
+     }
+}
+.profile__description {
+    @include arodoralight();
+    font-size: 18px;
+    margin-bottom: 27px;
+    @include _640 {
+        font-size: 13px
+    }
+}
+.profile__button {
+    @include nextArtlight();
+    padding: 14px 38px;
+    color: #000;
+    font-size: 18px;
+    border: $yellow-color;
+    border-radius: 6px;
+    box-shadow: 0px 2px 13px 0px rgba(226, 158, 0, 0.48);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, $yellow-color 0%, #e86844 51%, $yellow-color 100%);
+    &:hover {
+        cursor: pointer;
+       background-position: right center;
+    }
+    @include _640 {
+        padding: 10px 20px;
+        font-size: 13px;
+     }
+}
+.profile__photo-wrapper{
+    display: flex;
+    width: 550px;
+    height: 550px;
+    @include _640 {
+       width: 460px; 
+    }
+    @include _540 {
+        margin: 0 auto;
+     }
+}
+.profile__photo-wrapper__rounds {
+    margin: auto;
+    margin-right: 20px;
+    width: 90px;
+    height: 465px;
+    background: center/contain url("../images/rounds.svg") no-repeat;
+    @include _640 {
+        width: 60px;
+    }
+    @include _540 {
+        display: none;
+    }
+}
+.profile__photo-wrapper__image {
+    width: 550px;
+    height: 550px;
+    outline: 50px solid $blue-color;
+    outline-offset:-50px;
+    border-radius: 50px;
+    background: center/contain url("../images/фото\ для\ резюме.jpg") no-repeat;
+    @include _640 {
+       height: 403px;
+       width: 360px;
+       outline-offset: -40px;
+       outline-width: 40px; 
+    }
+    @include _540 {
+       margin: 0 auto;
+    }
+}
+$cards-color:#2A2A2A;
+$bg-about: #414141;
+$bg-about-image: #2C2C2C;
+.about {
+    @include arodoralight();
+    font-weight: 24px;
+    background-color: $bg-about;
+    max-width: 100%;
+}
+.about__tech {
+    max-width: 1250px;
+    margin: 100px auto auto auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 40px;
+    row-gap: 30px;
+    
+    @include _960 {
+        column-gap: 0;
+     }
+    @include _640 {
+        margin: 50 auto auto auto;
+        justify-items: center;
+     }
+    }
+
+.about__tech-block {
+    @include flexible();
+    flex-direction: column;
+    width: 270px;
+    height: 270px;
+    background-color: $cards-color;
+    border-radius: 30px;
+
+    @include _1200 {
+        width: 180px;
+        height: 180px;
+     }
+    @include _960 {
+        max-width: 200px;
+        max-height: 200px;
+     }
+     @include _640 {
+        width: 100px;
+        height: 100px;
+     }
+}
+.about__image-block {
+    margin-bottom: 50px;
+    @include _640 {
+        margin-bottom: 13px;
+        width: 27px;
+     }
+}
+.about__me-block {
+    @include flexible();
+    align-items: flex-start;
+    margin-top: 149px;
+    & div:last-child {
+        align-self: flex-end;
+    }
+    @include _640 {
+        margin-top: 90px;
+     }
+}
+.about__me {
+    background: center/cover url("../images/elipsAbout.svg") no-repeat;
+    background-position: 25% 5%;
+}
+.about__me_first-photo {
+    width: 272px;
+    height: 320px;
+    background: center/contain url("../images/портфолио.jpg") no-repeat;
+    outline: 30px solid $bg-about-image;
+    outline-offset:-30px;
+    border-radius: 15px;
+
+    @include _640 {
+        height: 170px;
+        outline-width: 24px;
+        outline-offset: -24px;
+     }
+}
+.about__me_second-photo {
+    width: 287px;
+    height: 350px;
+    background: center/contain url("../images/портфолио2.jpg") no-repeat;
+    outline: 30px solid $bg-about-image;
+    outline-offset:-30px;
+    border-radius: 15px;
+    margin-bottom: 159px;
+    @include _640 {
+        width: 285px;
+        height: 228px;
+        outline-width: 24px;
+        outline-offset: -24px;
+        margin-bottom: 90px;
+     }
+}
+.about__me_main-text {
+    max-width: 496px;
+    margin-bottom: 159px;
+    @include _640 {
+        margin-bottom: 90px;
+     }
+}
+.about__me-text {
+    @include arodoralight();
+    letter-spacing: 1%;
+    font-size: 20px;
+    text-align: left;
+    background-color: $cards-color;
+    max-width: 370px;
+    padding: 27px 63px;
+    border-radius: 14px;
+    @include _640 {
+        font-size: 13px;
+        padding: 27px 36px;
+     }
+}
+.about__me-header {
+    @include nextArtRegular();
+    font-size: 48px;
+    margin-left: 28px;
+    text-transform: uppercase;
+
+    @include _640 {
+        font-size: 35px;
+     }
+}
+
+//Портфолио
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.portfolio {
+    @include flexible();
+    flex-direction: column;
+    margin-top: 87px;
+    margin-bottom: 50px;
+}
+.portfolio__container {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 970px;
+    background-color: $bg-about;
+    border-radius: 29px;
+    padding: 50px;
+    margin-top: 50px;
+
+    @include _1200 {
+        max-width: 660px;
+    }
+    @include _500 {
+        padding: 0;
+     }
+}
+.portfolio__header {
+    @include nextArtRegular();
+    font-size: 48px;
+    @include _640 {
+        font-size: 35px;
+     }
+}
+.portfolio__wrapper{
+    @include flexible();
+    // @include _960 {
+    //     width: 100%;
+    //  }
+}
+.slider__item {
+    @include flexible();
+    @include _640 {
+        flex-direction: column;
+     }
+}
+.slider__img_first {
+    background: center/cover url("../images/портфолио_альтера.png") no-repeat;
+}
+.slider__img_second {
+    background: center/cover url("../images/портфолио_место.png") no-repeat;
+}
+.slider__img {
+    width: 490px;
+    height: 500px;
+    border-radius: 30px;
+    margin-right: 100px;
+
+    @include _1200 {
+        width: 300px;
+    }
+    @include _960 {
+        width: 350px;
+        margin-right: 20px;
+     }
+     @include _640 {
+        width: 250px;
+        margin-right: 0;
+     }
+     @include _500 {
+        height: 230px;
+     }
+     @include _480 {
+        height: 294px;
+     }
+}
+.slider__text {
+    margin-bottom: 115px;
+    @include _640 {
+        margin-bottom: 40px;
+    }
+}
+.slider__heading {
+    font-size: 24px;
+    margin-bottom: 78px;
+    text-align: center;
+    @include arodoralight();
+    @include _640 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+.slider__tech {
+    font-size: 18px;
+    max-width: 319px;
+    @include arodoralight();
+    @include _640 {
+      font-size: 13px;  
+    }
+}
+.slider__text-wrapper {
+    margin-top: 32px;
+    max-width:320px;
+
+    @include _1200 {
+        max-width: 230px;
+    }
+    @include _640 {
+        max-width: 185px;
+    }
+}
+.slider__link {
+    color: #E2A100;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 115px;
+    transition: all .5s ease;
+    cursor: pointer;
+    &:hover {
+        color: #ffb702;
+    }
+}
+
+.portfolio__control {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #E2A300;
+    transition: all .5s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: #ffb702;
+    }
+    @include _640 {
+        width: 40px;
+        height: 40px;
+    }
+}
+.portfolio__prev {
+    margin-right: 40px;
+    @include _960 {
+        margin-right: 10px;
+     }
+}
+.portfolio__next {
+    margin-left: 40px;
+    @include _960 {
+        margin-left: 10px;
+     }
+}
+.footer{
+    background-color: $bg-about;
+    font-size: 18px;
+}
+.footer__wrapper {
+    @include arodoralight();
+    display: flex;
+    justify-content: space-between;
+    max-width: 873px;
+    margin: 50px auto;
+    @include _640 {
+        font-size: 13px;
+        margin: 40px 20px;
+    }
+}
+.footer__logo-img {
+    width:90px;
+    height: 60px;
+    background: center/contain url('../images/logoo.png') no-repeat;
+}
+.footer__menu {
+    list-style:none;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    a {
+        color: #E4E4E4;
+        text-decoration: none;
+    }
+}
+.footer__contacts {
+    list-style:none;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+}
+.footer__logo {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+}
+.footer__menu li {
+    position: relative;
+    cursor: pointer;
+    line-height: 1; /*задаём высоту строки*/
+    text-decoration: none; /*убираем подчёркивание*/
+
+    &:after{
+        display: block;
+        position: absolute;
+        left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+        width: 0;/*задаём длинну линии до наведения курсора*/
+        height: 2px; /*задаём ширину линии*/
+        background-color: $yellow-color; /*задаём цвет линии*/
+        content: "";
+        transition: width 0.3s ease-out; /*задаём время анимации*/
+    }
+    &:hover:after,
+    &:focus:after {
+        width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+    }
+}
