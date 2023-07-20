@@ -376,13 +376,17 @@
   outline-offset: -30px;
   border-radius: 15px;
 }
+@media (max-width: 960px) {
+  .about__me_first-photo {
+    display: none;
+  }
+}
 @media (max-width: 640px) {
   .about__me_first-photo {
     width: 272px;
     height: 126px;
     outline-width: 10px;
     outline-offset: -10px;
-    display: none;
   }
 }
 

@@ -346,12 +346,14 @@ $bg-about-image: #2C2C2C;
     outline-offset:-30px;
     border-radius: 15px;
 
+    @include _960 {
+        display: none;
+    }
     @include _640 {
         width: 272px;
         height: 126px;
         outline-width: 10px;
         outline-offset: -10px;
-        display: none;
      }
 }
 .about__me_second-photo {
