@@ -47,6 +47,11 @@ $bc-main: #292929;
         @content;
     }
 }
+@mixin _760 {
+    @media (max-width: 760px){
+        @content;
+    }
+}
 @mixin _640 {
     @media (max-width: 640px){
         @content;
@@ -452,10 +457,8 @@ $bg-about-image: #2C2C2C;
 }
 .slider__item {
     @include flexible();
-    @include _640 {
+    @include _760 {
         flex-direction: column;
-     }
-     @include _640 {
         padding-bottom: 20px;
      }
 }

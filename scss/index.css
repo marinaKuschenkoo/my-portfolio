@@ -519,13 +519,9 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 640px) {
+@media (max-width: 760px) {
   .slider__item {
     flex-direction: column;
-  }
-}
-@media (max-width: 640px) {
-  .slider__item {
     padding-bottom: 20px;
   }
 }
