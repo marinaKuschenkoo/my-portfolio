@@ -58,7 +58,7 @@ $bc-main: #292929;
     }
 }
 @mixin _540 {
-    @media (max-width: 640px){
+    @media (max-width: 540px){
         @content;
     }
 }
