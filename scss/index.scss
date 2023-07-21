@@ -298,7 +298,7 @@ $bg-about-image: #2C2C2C;
         grid-template-columns: repeat(3,1fr);
      }
     @include _640 {
-        //grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4,1fr);
         //margin: 50 auto auto auto;
         justify-items: center;
      }

@@ -308,6 +308,7 @@
 }
 @media (max-width: 640px) {
   .about__tech {
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
   }
 }
