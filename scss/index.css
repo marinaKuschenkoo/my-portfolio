@@ -539,6 +539,10 @@
   background: center/cover url("../images/портфолио_место.png") no-repeat;
 }
 
+.slider__img_third {
+  background: center/cover url("../images/портфолио_фильмы.png") no-repeat;
+}
+
 .slider__img {
   width: 490px;
   height: 500px;
